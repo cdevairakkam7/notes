@@ -71,7 +71,7 @@ available[^7]
     * This means there is no performance impact or interruption of database service during backups
 * MySQL has daily backup windows
     * There is a slight performance impact when the backup initiates for single availability zone deployments.
-### instance Classes - 
+### Instance Classes - 
 * MySQL has T,M and R type instances
 * Aurora does not have M type instances
 
