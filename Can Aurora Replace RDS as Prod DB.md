@@ -3,17 +3,17 @@
 ## Please consider the following factors before making a decision.
 
 ### Cost - 
-* Amazon tech support says that cost of Aurora is ~20% more than MySQL^1^.
+* Amazon tech support says that cost of Aurora is ~20% more than MySQL[^1] .
 * If things are not implemented as per standard operating procedures the cost might increase significantly.
 * This means thorough planning and getting the migration correct on the first attempt is very important. 
-* Also Aurora's cost is hard to predict^2^.
+* Also Aurora's cost is hard to predict[^2].
   * There is a per-hour instance cost.
   * And cost based on per million I/O operations.
     * Auro does not have fixed IOPS limit like MySQL. 
 * Auro read replcias will 2X the cost.
 
 ### Throughput- 
-* Aurora can deliver up to 5X more throughput than MySQL 5.7.1 on the same hardware^3^ 
+* Aurora can deliver up to 5X more throughput than MySQL 5.7.1 on the same hardware[^3] 
     * No extra modifications are needed to increase the throughput
     * Note - This only works if the data size larger 
     * For small-medium sized datasets they both perform equally 
@@ -30,7 +30,7 @@ MySQL is open source a
 
 ### Storage 
 * Aurora storage automatically grows in 10 GB increments, starting from 10 GB it can automatically increment in up to 64TiB or 128 TiB 
-depending upon DB engine version^4^
+depending upon DB engine version[^4]
 * During scaling and distribution performance is not impacted 
 * If for some reason data is removed form the database Aurora automatically decreases the storage size
     * This feature helps in reduction of cost    
@@ -38,11 +38,11 @@ depending upon DB engine version^4^
 
 ### Table Size - 
 * In Aurora the size of the table is only constrained by the size of the cluster volume
-    * This means a table size can be as big as 64TiB 5
+    * This means a table size can be as big as 64TiB[^5]
 * In MySQL 5.7.1 the maximum size of a table can be only 16 TB 
 
 ### Replicas - 
-* Aurora can provision up to 15 replicas 6
+* Aurora can provision up to 15 replicas[^6]
     * MySQL 5.7.1 can provision only 5 replicas
 * All Aurora instances share the same underlying volume with the primary instance
     * This means replication can be performed in milliseconds
@@ -52,9 +52,9 @@ depending upon DB engine version^4^
 
 
 ### Writer - 
-* Aurora uses shared storage for writer and reader. This means Aurora replicas are synced with writer instance with minimal replication lag^6^
+* Aurora uses shared storage for writer and reader. This means Aurora replicas are synced with writer instance with minimal replication lag[^6]
 * Aurora has multi - writer feature. This means if primary DB writer instance is unavailable another writer instance will be immediately 
-available^7^
+available[^7]
     * AWS refers to this as continuous availability
 * MySQL just has one writer
 * Note - Multi - writer can create write conflict.
@@ -86,16 +86,16 @@ for infrequent, intermittent or unpredictable workloads
     * Global database uses storage based replication to replicate database across multiple regions with a typical latency of less than 
 1 second
 * Query Plan Management - With this we control how and when the execution plan changes .
-    * Query optimizer is restricted to our plan
+    * Query optimizer is restricted to our plan[^8]
 
 ### References 
-1. Amazon tech support [ via AWS management console ]
-2. https://www.lastweekinaws.com/blog/aurora-vs-rds-an-engineers-guide-to-choosing-a-database/
-3. https://aws.amazon.com/rds/aurora/mysql-features/
-4. https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.StorageReliability.html
-5. https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_Limits.html
-6. https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Replication.html#Aurora.Replication.Replicas
-7. https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-multi-master.html
-8. https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Optimize.html
-9. https://www.percona.com/blog/2018/07/17/when-should-i-use-amazon-aurora-and-when-should-i-use-rds-mysql/
+[^1]:  Amazon tech support [ via AWS management console ]
+[^2]:  https://www.lastweekinaws.com/blog/aurora-vs-rds-an-engineers-guide-to-choosing-a-database/
+[^3]:  https://aws.amazon.com/rds/aurora/mysql-features/
+[^4]:  https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.StorageReliability.html
+[^5]:  https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_Limits.html
+[^6]:  https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Replication.html#Aurora.Replication.Replicas
+[^7]:  https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-multi-master.html
+[^8]:  https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Optimize.html
+[^9]:  https://www.percona.com/blog/2018/07/17/when-should-i-use-amazon-aurora-and-when-should-i-use-rds-mysql/
 
