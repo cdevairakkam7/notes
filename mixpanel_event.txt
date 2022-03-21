@@ -1,0 +1,5 @@
+[
+ {"event":"Video Played","properties":{"time": 1634145632,"distinct_id": "123", "test_property": "test_value","$browser": "Chrome","ip":"72.229.28.185"}},
+ {"event":"Video Paused","properties":{"time": 1631552268,"distinct_id": "1234", "test_property": "test_value"}},
+ {"event":"Video Resumed","properties":{"time": 1631552268, "distinct_id": "1235", "test_property": "test_value"}}
+]
