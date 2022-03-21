@@ -19,7 +19,7 @@
        ```
 ### Step 4: 
 Python Script
-```Python
+```
 #Import the necessary module
 from mixpanel_utils import MixpanelUtils
 
