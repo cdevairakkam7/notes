@@ -13,19 +13,20 @@
 
 ### Step 3:
 * Install required Python modules 
-  * ```Python 
-       pip install requests
-       pip install mixpanel_utils 
-       ```
+ ``` 
+  pip install requests
+  pip install mixpanel_utils
+  ```
 ### Step 4: 
 Python Script
+
 ```
-#Import the necessary module
+# Import the necessary module
 from mixpanel_utils import MixpanelUtils
 
 if __name__ == '__main__':
     
-    #Plug in the credentials here
+    # Plug in the credentials here
     credentials = {'API_secret': 'XXX','token': 'YYY',}
     
     import_event = MixpanelUtils(credentials['API_secret'],credentials['token'])
