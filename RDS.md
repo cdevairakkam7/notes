@@ -3,7 +3,7 @@
 ## Please consider the following factors before making a decision.
 
 ### Cost - 
-* Amazon tech support says that the cost of Aurora is ~20% more than MySQL[^1] .
+* Amazon tech support says that the cost of Aurora is ~20% more than RDS MySQL[^1] .
 * If things are not implemented as per standard operating procedures the cost might increase significantly.
 * This means thorough planning and getting the migration correct on the first attempt is very important. 
 * Also Aurora's cost is hard to predict[^2].
