@@ -17,15 +17,15 @@ pip install time
 ### Step 4:
 * Run the following code 
 ```
-""" import necessary modules """
+  #import necessary modules 
   import requests
   import time
  
- """ Retrieve Epoch time """
+ #Retrieve Epoch time
  now_in_unix=int(time.time())
   
   
-  """ Assign Credentials """
+  #Assign Credentials
   slack_app_token ='xapp-1-REDACTED'
   slack_channel = '#python_api'
   slack_token = 'xoxb-REDACTED'
@@ -34,7 +34,7 @@ pip install time
 
 
 
-  """ Function to post the message"""
+   #Function to post the message
   def post_message_to_slack(text, blocks = None):
     
     requests.post('https://slack.com/api/chat.postMessage', {
@@ -44,7 +44,7 @@ pip install time
     })
     return'Success' 
 
-    """ Calling the function """
+     #Calling the function
     
    post_message_to_slack(text=f'Time elapsed in Epoch is  {now_in_unix}')
 
