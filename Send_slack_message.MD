@@ -1,10 +1,10 @@
 # Programmatically Send Slack Messages Using Python.
 
 ### Step 1:
-* Create a app inside slack and create a app level token with channel write access
+* Create a app inside Slack and create a app level token with `channel write access`
   * In your Python script assign app level token  to `slack_app_token` variable
 * Retrieve the bot user OAuth token from the OAuth and permissions page
-  * In your Python script assign app level token  to `slack_token` variable
+  * In your Python script assign the bot user OAuth token  to `slack_token` variable
 
 ### Step 2:
 Install the following modules
@@ -17,17 +17,17 @@ pip install time
 * Inside Slack create a channel called `#python_api`
 
 ### Step 4:
-import necessary modules 
+Import necessary modules 
 ```
   import requests
   import time
   ```
  
-Retrieve Epoch time
+Retrieve epoch time
 ```
 now_in_unix=int(time.time())
 ```
-Assign Credentials
+Assign credentials
 
 ```
 slack_app_token ='xapp-1-REDACTED'
