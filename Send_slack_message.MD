@@ -2,9 +2,9 @@
 
 ### Step 1:
 * Create a app inside slack and create a app level token with channel write access
-  * Copy the app level token  into `slack_app_token` variable
+  * In your Python script assign app level token  to `slack_app_token` variable
 * Retrieve the bot user OAuth token from the OAuth and permissions page
-  * Copy the bot user OAuth token into `slack_token` variable
+  * In your Python script assign app level token  to `slack_token` variable
 
 ### Step 2:
 Install the following modules
