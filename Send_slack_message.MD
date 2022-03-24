@@ -1,4 +1,4 @@
-# Programatically Send Slack Messages Using Python.
+# Programmatically Send Slack Messages Using Python.
 
 ### Step 1:
 * Create a app inside slack and create a  app level token with channel write access
