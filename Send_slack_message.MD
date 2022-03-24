@@ -15,7 +15,7 @@ pip install time
 * Inside Slack create a channel called `#python_api`
 
 ### Step 4:
-* Run the following code 
+Run the following code 
 ```
   #import necessary modules 
   import requests
