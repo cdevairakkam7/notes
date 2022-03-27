@@ -52,17 +52,26 @@ out=0
 ## Insertion of Data 
 ```
 for line in csv_reader:
+
     if line[1] !='Industry_aggregation_NZSIOC':
         sql_string.append (f"('{line[0]}','{line[1]}','{line[2]}','{line[3]}','{line[4]}','{line[5]}','{line[6]}','{line[7]}','{line[8]}','{line[9]}'),")
-        if len(sql_string)%50 == 0:
         
         # Inserting every 50 rows
-        # Cleaning the values before insert
+        if len(sql_string)%50 == 0:
+        
+        
+            # Cleaning the values before insert
             insert_string =f"insert into enterprise_survey values({sql_string})"
+            
             insert_string=insert_string.replace('["(','')
+            
             insert_string=insert_string.replace('", "','')
+            
             insert_string=insert_string.replace('),"])',')')
+            
             sql_string==[]
+            
+            # Inserting the data
             connection.execute(insert_string)
             insert_string=[]
 ```
