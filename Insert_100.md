@@ -68,6 +68,19 @@ for line in csv_reader:
             
             sql_string=[]
             insert_string=[]
+
+insert_string=sql_string
+
+if len(insert_string)>0 :
+
+
+            insert_string =f"insert into enterprise_survey values({insert_string})"
+
+            insert_string=insert_string.replace('["(','')
+            insert_string=insert_string.replace('", "','')
+            insert_string=insert_string.replace('),"])',')')
+
+            connection.execute(insert_string)
             
             
 ```
