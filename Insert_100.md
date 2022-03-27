@@ -56,7 +56,7 @@ for line in csv_reader:
     if line[1] !='Industry_aggregation_NZSIOC':
     
         sql_string.append(f"('{line[0]}','{line[1]}','{line[2]}','{line[3]}','{line[4]}','{line[5]}','{line[6]}','{line[7]}','{line[8]}','{line[9]}'),")
-        if len(sql_string)%1000 == 0:
+        if len(sql_string)%16000 == 0:
             insert_string=sql_string 
             insert_string =f"insert into enterprise_survey values({insert_string})"
             
