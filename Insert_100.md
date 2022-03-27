@@ -68,7 +68,7 @@ for line in csv_reader:
             
             sql_string=[]
             insert_string=[]
-
+# Insert remaining rows
 insert_string=sql_string
 
 if len(insert_string)>0 :
