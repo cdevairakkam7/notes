@@ -33,12 +33,12 @@ csv_reader=csv.reader(file_object)
 ## Creation of Table 
 ```
 engine = create_engine(URL(
-            account = 'fva01610',
-            user = 'cdaniel7',
-            password = 'Amplitude20DEC!',
-            database = 'hackerrank',
-            schema = 'test_schema',
-            warehouse = 'compute_wh',
+            account = 'REDACTED',
+            user = 'REDACTED',
+            password = 'REDACTED!',
+            database = 'REDACTED',
+            schema = 'REDACTED',
+            warehouse = 'REDACTED',
             autocommit=True
         ))
 
