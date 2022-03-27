@@ -71,7 +71,7 @@ for line in csv_reader:
 # Insert remaining rows
 insert_string=sql_string
 
-if len(insert_string)>0 :
+if len(sql_string)>0 :
 
 
             insert_string =f"insert into enterprise_survey values({insert_string})"
