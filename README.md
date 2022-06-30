@@ -1,4 +1,3 @@
-* [Proven Architecture Used By Tech Startups To Measure Cost Per Acquisition [CPA]](https://github.com/cdevairakkam7/notes/blob/main/cost_per_acq.MD)
 * [Can Amazon Aurora Replace AWS RDS as Production Database?](https://cdevairakkam7.github.io/notes/RDS.html)
 * [Insert Events Into Mixpanel via Python API](https://cdevairakkam7.github.io/notes/Mixpanel_Insert_Event.html).
 * [Programmatically Send Slack Messages in Python](https://cdevairakkam7.github.io/notes/Send_slack_message.html).
